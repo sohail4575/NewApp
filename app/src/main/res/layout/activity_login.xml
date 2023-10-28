@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/style"
+    tools:context=".LoginActivity"
+    >
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/login" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#B7F8F3">
+
+
+            <TextView
+                android:id="@+id/texts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="OTP Verification"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:id="@+id/we"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/texts"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="We will send you an One Time Password"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/we"
+                android:gravity="center"
+                android:text="on this mobile number"
+                android:textSize="12dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/mobile"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="#03F4BC"
+                app:hintTextColor="#06ACA6"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:paddingTop="10dp"
+                    android:textSize="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sendotp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/input1"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="#06ACA6"
+                android:text="GET OTP"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/otp"
+                app:itemCount="6"
+                app:itemWidth="43dp"
+                app:itemHeight="43dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:itemBackground="@color/white"
+                android:layout_gravity="center"
+                android:inputType="number"
+                android:layout_centerHorizontal="true"
+                android:cursorVisible="true"
+                android:layout_below="@id/mobile"
+                app:itemRadius="10dp"
+                style="@style/PinWidget.PinView"
+                android:visibility="gone"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sendotp2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/input1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#06ACA6"
+                android:text="Verify OTP"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
